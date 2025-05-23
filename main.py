@@ -1,11 +1,13 @@
+import os.path as osp
+
 import asyncio
 import pygame
 import sys
-import player as pl
-import mysprites as sp
-import Enemy as en
-import powerUPs as pUP
 from random import randint
+import src.player as pl
+import src.mysprites as sp
+import src.enemy as en
+import src.powerUPs as pUP
 
 
 
@@ -15,12 +17,13 @@ spawnCount = 0
 
 
 #start game
+assets_folder = osp.join('assets')
 pygame.init()
 gameWindow = pygame.display.set_mode(gameWindowSize)
 pygame.display.set_caption("Game")
-background = pygame.image.load("background.png").convert()
+background = pygame.image.load(osp.join(assets_folder, "background.png")).convert()
 backgroundY = 0
-winScreen = pygame.image.load("winScreen.png")
+winScreen = pygame.image.load(osp.join(assets_folder, "winScreen.png"))
 
 
 #Frameratelimiter

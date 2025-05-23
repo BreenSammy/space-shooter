@@ -1,12 +1,13 @@
+import os.path as osp
+
 import pygame
 import sys
-import mysprites as sp
-import powerUPs as pUP
-import time 
+import src.mysprites as sp
 
+player_assets_folder = osp.join('assets', 'playerAssets')
 
-ship = pygame.image.load("PlayerAssets/ship.png")
-shipWithShield = pygame.image.load("PlayerAssets/shipWithShield.png")
+ship = pygame.image.load(osp.join(player_assets_folder, "ship.png"))
+shipWithShield = pygame.image.load(osp.join(player_assets_folder, "shipWithShield.png"))
 
 
 class Player(pygame.sprite.Sprite):

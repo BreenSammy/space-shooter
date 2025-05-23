@@ -1,23 +1,22 @@
+import os.path as osp
+
 import pygame
-import mysprites as sp
-from random import randint
+import src.mysprites as sp
 
 
 
+assets_folder = osp.join('assets', 'enemyAssets')
 
-
-enemy1 = pygame.image.load("EnemyAssets/EnemyShip1.png")
-enemy2 = pygame.image.load("EnemyAssets/EnemyShip2.png")
-enemy3 = pygame.image.load("EnemyAssets/EnemyShip3.png")
-enemy4 = pygame.image.load("EnemyAssets/EnemyShip4.png")
-boss = pygame.image.load("EnemyAssets/Boss.png")
+enemy1 = pygame.image.load(osp.join(assets_folder, "EnemyShip1.png"))
+enemy2 = pygame.image.load(osp.join(assets_folder, "EnemyShip2.png"))
+enemy3 = pygame.image.load(osp.join(assets_folder, "EnemyShip3.png"))
+enemy4 = pygame.image.load(osp.join(assets_folder, "EnemyShip4.png"))
+boss = pygame.image.load(osp.join(assets_folder, "Boss.png"))
 
 
 killCount = 0
 
 class EasyEnemy(pygame.sprite.Sprite):
-
-    
 
     def __init__(self,stop, xpos):
         pygame.sprite.Sprite.__init__(self)

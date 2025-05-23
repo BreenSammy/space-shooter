@@ -1,11 +1,16 @@
+import os.path as osp
+
 import pygame
 from random import randint
 from random import choice
 
+power_up_assets_folder = osp.join('assets', 'powerUPAssets')
+
+
 powerUPImages = {}
-powerUPImages["shield"] = pygame.image.load("PowerUPAssets/ShieldPowerUP.png")
-powerUPImages["life"] = pygame.image.load("PowerUPAssets/LifePowerUP.png")
-powerUPImages["gun"] = pygame.image.load("PowerUPAssets/GunPowerUP.png")
+powerUPImages["shield"] = pygame.image.load(osp.join(power_up_assets_folder, "ShieldPowerUP.png"))
+powerUPImages["life"] = pygame.image.load(osp.join(power_up_assets_folder, "LifePowerUP.png"))
+powerUPImages["gun"] = pygame.image.load(osp.join(power_up_assets_folder, "GunPowerUP.png"))
 
 
 

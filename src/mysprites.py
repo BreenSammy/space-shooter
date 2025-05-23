@@ -1,5 +1,6 @@
+import os.path as osp
+
 import pygame
-import random
 
 allSprites = pygame.sprite.Group()
 enemySprites = pygame.sprite.Group()
@@ -7,15 +8,14 @@ playerBullets = pygame.sprite.Group()
 enemyBullets =  pygame.sprite.Group()
 powerUPList = pygame.sprite.Group()
 
-bluebullet = pygame.image.load("PlayerAssets/bulletPlayer.png")
+player_assets_folder = osp.join('assets', 'playerAssets')
+bluebullet = pygame.image.load(osp.join(player_assets_folder, "bulletPlayer.png"))
+live = pygame.image.load(osp.join(player_assets_folder, "heartPixelArt2.png"))
 
-yellowbullet1 = pygame.image.load("EnemyAssets/EnemyBullet1.png")
-yellowbullet2 = pygame.image.load("EnemyAssets/EnemyBullet2.png")
-yellowbullet3 = pygame.image.load("EnemyAssets/EnemyBullet3.png")
-
-live = pygame.image.load("PlayerAssets/heartPixelArt2.png")
-
-
+enemy_assets_folder = osp.join('assets', 'enemyAssets')
+yellowbullet1 = pygame.image.load(osp.join(enemy_assets_folder, "EnemyBullet1.png"))
+yellowbullet2 = pygame.image.load(osp.join(enemy_assets_folder, "EnemyBullet2.png"))
+yellowbullet3 = pygame.image.load(osp.join(enemy_assets_folder, "EnemyBullet3.png"))
 
 
 # draws lives on screen
